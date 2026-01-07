@@ -1,178 +1,81 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lurola Networks</title>
+  <meta charset="UTF-8">
+  <title>Lurola Networks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --bg:#0b0b12;
-  --card:#14141d;
-  --primary:#7c3aed;
-  --accent:#22d3ee;
-  --text:#ffffff;
-  --muted:#a1a1aa;
-}
-
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Inter, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-}
-
-header{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:#0b0b12cc;
-  backdrop-filter:blur(8px);
-  border-bottom:1px solid #222;
-  z-index:10;
-}
-
-nav{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:16px;
-}
-
-nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:20px;
-}
-
-.hero{
-  height:90vh;
-  background:
-    linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,.9)),
-    url("https://images.unsplash.com/photo-1719475917707-ca0583b63549?auto=format&fit=crop&w=1600&q=80");
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-
-.hero h1{
-  font-size:64px;
-  margin:0;
-}
-
-.hero p{
-  font-size:22px;
-  color:#ddd;
-}
-
-.button{
-  background:var(--primary);
-  color:white;
-  padding:14px 28px;
-  border-radius:10px;
-  text-decoration:none;
-  display:inline-block;
-  margin:10px;
-  font-weight:bold;
-}
-
-.ip{
-  font-family:"Press Start 2P";
-  border:2px dashed var(--accent);
-  padding:12px;
-  display:inline-block;
-  margin-top:20px;
-  cursor:pointer;
-}
-
-section{
-  max-width:1200px;
-  margin:auto;
-  padding:100px 20px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:30px;
-}
-
-.card{
-  background:var(--card);
-  padding:30px;
-  border-radius:16px;
-  border:1px solid #222;
-}
-
-footer{
-  background:#111;
-  padding:40px;
-  text-align:center;
-  color:#888;
-}
-</style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <header>
-  <nav>
-    <strong>Lurola Networks</strong>
-    <div>
-      <a href="#">Home</a>
+  <div class="nav">
+    <h1>Lurola Networks</h1>
+    <nav>
+      <a href="index.html">Home</a>
       <a href="rules.html">Regeln</a>
       <a href="map.html">Weltkarte</a>
-      <a href="https://discord.gg/your-invite">Discord</a>
-    </div>
-  </nav>
+      <a class="button" href="https://discord.gg/your-invite-code" target="_blank">Discord</a>
+    </nav>
+  </div>
 </header>
 
-<div class="hero">
-  <div>
-    <h1>Lurola Networks</h1>
-    <p>Dein Minecraft-Zuhause für kreative Köpfe</p>
-    <a class="button" href="https://discord.gg/your-invite">Discord beitreten</a>
-    <div class="ip" onclick="copyIP()">lurola.de</div>
-  </div>
-</div>
+<section class="hero">
+  <div class="hero-content">
+    <h2>Willkommen bei Lurola Networks</h2>
+    <p>Dein Minecraft-Zuhause für kreative Köpfe & Abenteurer</p>
 
-<section>
-<h2>Was uns ausmacht</h2>
-<div class="grid">
-  <div class="card">Vanilla-nahes Survival</div>
-  <div class="card">QoL Plugins</div>
-  <div class="card">Community Events</div>
-  <div class="card">Langfristige Welt</div>
-</div>
+    <div class="buttons">
+      <a class="button big" href="https://discord.gg/your-invite-code" target="_blank">Join Discord</a>
+      <div class="ip-box" onclick="copyIP()">lurola.de</div>
+    </div>
+  </div>
 </section>
 
-<section>
-<h2>So kommst du drauf</h2>
-<div class="grid">
-  <div class="card">1. Discord beitreten</div>
-  <div class="card">2. Regeln akzeptieren</div>
-  <div class="card">3. Whitelist bekommen</div>
-</div>
+<section class="features">
+  <h2>Was uns ausmacht</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Vanilla-nah</h3>
+      <p>Kein Pay-to-Win, kein Mod-Zwang.</p>
+    </div>
+
+    <div class="card">
+      <h3>QoL Plugins</h3>
+      <p>TPA, Homes, Schutzsysteme, aber fair.</p>
+    </div>
+
+    <div class="card">
+      <h3>Community</h3>
+      <p>Events, Projekte & Discord-Community.</p>
+    </div>
+
+    <div class="card">
+      <h3>Langzeitwelt</h3>
+      <p>Keine Resets, deine Bauten bleiben.</p>
+    </div>
+  </div>
+</section>
+
+<section class="join">
+  <h2>So kommst du drauf</h2>
+
+  <ol>
+    <li>Discord beitreten</li>
+    <li>Regeln lesen</li>
+    <li>Whitelist beantragen</li>
+  </ol>
+
+  <a class="button big" href="https://discord.gg/your-invite-code" target="_blank">Jetzt starten</a>
 </section>
 
 <footer>
-© 2026 Lurola Networks
+  <p>© 2026 Lurola Networks</p>
 </footer>
 
-<script>
-function copyIP(){
-  navigator.clipboard.writeText("lurola.de");
-  alert("IP kopiert!");
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
